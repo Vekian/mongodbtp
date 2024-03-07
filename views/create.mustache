@@ -1,0 +1,96 @@
+<html>
+ <head>
+  </head>
+    <body>
+        <form action="/annonces" method="POST">
+            <div>
+                <label for="titre">
+                    Titre de l'annonce
+                </label>
+                <input type="text" name="titre" id="titre" />
+            </div>
+            <div>
+                <label for="description">
+                    Description
+                </label>
+                <input type="text" name="description" />
+            </div>
+            <div>
+                <label for="prix">
+                    Prix
+                </label>
+                <input type="number" name="prix" min="0" max="1000000" />
+            </div>
+            <div>
+                <label for="surface">
+                    Surface
+                </label>
+                <input type="number" name="surface" min="0" max="10000" />
+            </div>
+            <div>
+                <label for="ville">
+                    Ville
+                </label>
+                <input type="text" name="localisation.ville" />
+            </div>
+            <div>
+                <label for="codePostal">
+                    Code postal
+                </label>
+                <input type="number" name="localisation.codePostal" />
+            </div>
+            <div>
+                <label for="chambre">
+                    Chambre
+                </label>
+                <input type="number" name="caractéristiques.chambre" />
+            </div>
+            <div>
+                <label for="salleDeBain">
+                    Salle de bain
+                </label>
+                <input type="number" name="caractéristiques.salleDeBain" />
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Balcon</legend>
+                    <label for="balconTrue">
+                        Oui
+                    </label>
+                    <input type="radio" id="balconTrue" name="caractéristiques.balcon" value="true" />
+                    <label for="balconFalse">
+                        Non
+                    </label>
+                    <input type="radio" id="balconFalse" name="caractéristiques.balcon" value="false" />
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Jardin</legend>
+                    <label for="jardinTrue">
+                        Oui
+                    </label>
+                    <input type="radio" id="jardinTrue" name="caractéristiques.jardin" value="true" />
+                    <label for="jardinFalse">
+                        Non
+                    </label>
+                    <input type="radio" id="jardinFalse" name="caractéristiques.jardin" value="false" />
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Parking</legend>
+                    <label for="parkingTrue">
+                        Oui
+                    </label>
+                    <input type="radio" id="parkingTrue" name="caractéristiques.parking" value="true" />
+                    <label for="parkingFalse">
+                        Non
+                    </label>
+                    <input type="radio" id="parkingFalse" name="caractéristiques.parking" value="false" />
+                </fieldset>
+            </div>
+            <input type="submit" value="créer"/>
+        </form>
+    </body>
+</html>
